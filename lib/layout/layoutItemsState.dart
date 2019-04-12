@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layouts/layout/layoutitem.dart';
 import 'package:flutter_layouts/page_two.dart';
+import 'package:flutter_layouts/secondlayout/first_route.dart';
 
 class LayoutItemsState extends State<LayoutItem>{
   final _layoutNames = <String>[];
@@ -43,13 +44,27 @@ Widget _populateLayoutStrings(){
       });
 }*/
 
-void navigateToPageTwo(){
-  Navigator.of(context).push(
-    MaterialPageRoute<void>(
-        builder: (BuildContext context){
-          return PageTwo();
-        })
-  );
+void navigate(int position){
+  switch(position){
+    case 0 :
+      Navigator.of(context).push(
+          MaterialPageRoute<void>(
+              builder: (BuildContext context){
+                return PageTwo();
+              })
+      );
+      break;
+    case 1:
+      Navigator.of(context).push(
+          MaterialPageRoute<void>(
+              builder: (BuildContext context){
+                return FirstRoute();
+              })
+      );
+      break;
+  }
+
+
 }
 
 Widget _populateLayouString(){
@@ -58,13 +73,13 @@ Widget _populateLayouString(){
     itemBuilder: (context, i){
       if(i.isOdd) return Divider();
       final index = i ~/ 2;
-      return _buildRow(_layoutNames[index]);
+      return _buildRow(_layoutNames[index], index);
     },
     itemCount: _layoutNames.length*2,
   );
 }
 
-  Widget _buildRow(String pair) {
+  Widget _buildRow(String pair, int index) {
     return ListTile(
       title: Text(
         pair,
@@ -74,7 +89,9 @@ Widget _populateLayouString(){
         Icons.favorite_border,
         color: Colors.red,
       ),
-      onTap:  navigateToPageTwo,
+      onTap: () {
+        navigate(index);
+      },
     );
   }
 
