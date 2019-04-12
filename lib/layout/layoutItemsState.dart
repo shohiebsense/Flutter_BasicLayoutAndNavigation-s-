@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layouts/layout/layoutitem.dart';
-import 'package:flutter_layouts/page_two.dart';
+import 'package:flutter_layouts/layout/page_two.dart';
 import 'package:flutter_layouts/secondlayout/first_route.dart';
 
 class LayoutItemsState extends State<LayoutItem>{
