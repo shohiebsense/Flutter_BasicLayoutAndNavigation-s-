@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_layouts/layout/layoutitem.dart';
+import 'package:flutter_layouts/layoutitem.dart';
 
 void main() => runApp(MyApp());
 
