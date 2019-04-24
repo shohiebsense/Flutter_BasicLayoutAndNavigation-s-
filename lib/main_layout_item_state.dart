@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layouts/chat_layout/chat_state_widget.dart';
 import 'package:flutter_layouts/main_layout_item.dart';
 import 'package:flutter_layouts/first_next_layout/page_two.dart';
 import 'package:flutter_layouts/returning_data/returning_data_screen.dart';
@@ -15,6 +16,7 @@ class LayoutItemsState extends State<LayoutItem> {
     _layoutNames.add("Ahmad");
     _layoutNames.add("Nasruddin");
     _layoutNames.add("Returning Data (On Actv Result)");
+    _layoutNames.add("Chat Layout");
   }
 
   @override
@@ -71,6 +73,11 @@ Widget _populateLayoutStrings(){
               return ReturningDataScreen();
         }));
         break;
+      case 4:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (BuildContext context){
+              return ChatStateWidget();
+        }));
     }
   }
 
