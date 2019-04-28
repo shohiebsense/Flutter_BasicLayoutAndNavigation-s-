@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layouts/chat_layout/chat_state_widget.dart';
+import 'package:flutter_layouts/login_layout/login_widget.dart';
 import 'package:flutter_layouts/main_layout_item.dart';
 import 'package:flutter_layouts/first_next_layout/page_two.dart';
 import 'package:flutter_layouts/returning_data/returning_data_screen.dart';
@@ -17,6 +18,7 @@ class LayoutItemsState extends State<LayoutItem> {
     _layoutNames.add("Nasruddin");
     _layoutNames.add("Returning Data (On Actv Result)");
     _layoutNames.add("Chat Layout");
+    _layoutNames.add("Login Layout");
   }
 
   @override
@@ -78,6 +80,18 @@ Widget _populateLayoutStrings(){
             .push(MaterialPageRoute(builder: (BuildContext context){
               return ChatStateWidget();
         }));
+        break;
+      case 5:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (BuildContext context){
+            return LoginWidget(
+              backgroundColor1: Color(0xFF444152),
+              backgroundColor2: Color(0xFF6f6c7d),
+              highlightColor: Color(0xfff65aa3),
+              foregroundColor: Colors.white,
+              logo: new AssetImage("assets/images/full-bloom.png"),);
+        }));
+        break;
     }
   }
 

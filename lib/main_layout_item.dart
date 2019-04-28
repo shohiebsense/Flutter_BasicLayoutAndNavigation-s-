@@ -7,8 +7,6 @@ class LayoutItem extends StatefulWidget {
     // TODO: implement createState
     return new LayoutItemsState();
   }
-
-
 }
 
 
