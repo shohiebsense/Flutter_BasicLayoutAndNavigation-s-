@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+//not the very best example
 class LoginWidget extends StatelessWidget {
   final Color backgroundColor1;
   final Color backgroundColor2;

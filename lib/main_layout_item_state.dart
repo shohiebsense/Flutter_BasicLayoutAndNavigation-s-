@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layouts/chat_layout/chat_state_widget.dart';
 import 'package:flutter_layouts/login_layout/login_widget.dart';
+import 'package:flutter_layouts/login_layout_2/login_widget_2.dart';
 import 'package:flutter_layouts/main_layout_item.dart';
 import 'package:flutter_layouts/first_next_layout/page_two.dart';
 import 'package:flutter_layouts/returning_data/returning_data_screen.dart';
 import 'package:flutter_layouts/second_next_layout/first_route.dart';
 import 'package:flutter_layouts/sized_box_layout/sized_box_sample.dart';
+
+import 'login_layout_3/LoginLayoutState.dart';
 
 class LayoutItemsState extends State<LayoutItem> {
   final _layoutNames = <String>[];
@@ -19,6 +22,8 @@ class LayoutItemsState extends State<LayoutItem> {
     _layoutNames.add("Returning Data (On Actv Result)");
     _layoutNames.add("Chat Layout");
     _layoutNames.add("Login Layout");
+    _layoutNames.add("Login Layout 2");
+    _layoutNames.add("Login Layout 3");
   }
 
   @override
@@ -92,6 +97,17 @@ Widget _populateLayoutStrings(){
               logo: new AssetImage("assets/images/full-bloom.png"),);
         }));
         break;
+      case 6:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (BuildContext context){
+              return LoginWidget2();
+        }));
+        break;
+      case 7:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (BuildContext context){
+              return LoginPage();
+        }));
     }
   }
 
