@@ -8,6 +8,7 @@ import 'package:flutter_layouts/returning_data/returning_data_screen.dart';
 import 'package:flutter_layouts/second_next_layout/first_route.dart';
 import 'package:flutter_layouts/sized_box_layout/sized_box_sample.dart';
 
+import 'grid_layout/grid_widget.dart';
 import 'login_layout_3/LoginLayoutState.dart';
 
 class LayoutItemsState extends State<LayoutItem> {
@@ -108,6 +109,13 @@ Widget _populateLayoutStrings(){
             .push(MaterialPageRoute(builder: (BuildContext context){
               return LoginPage();
         }));
+        break;
+      case 8:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder:(BuildContext context){
+            GridWidget();
+        }));
+        break;
     }
   }
 
