@@ -6,6 +6,7 @@ import 'package:flutter_layouts/grid_layout_2/model/city.dart';
 class GridPage extends StatelessWidget {
 
   final List<City> _allCities = City.allCities();
+  final GlobalKey<ScaffoldState> scaffoldKey = new GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,7 @@ class GridPage extends StatelessWidget {
           ),
         ),
       ),
+      key: scaffoldKey,
       body: Padding(
         padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
         child: getHomePageBody(context),
@@ -137,7 +139,9 @@ class GridPage extends StatelessWidget {
       backgroundColor: Colors.amber,
     );
 
-    Scaffold.of(context).showSnackBar(objSnackbar);
+    //Scaffold.of(context).showSnackBar(objSnackbar);
+    scaffoldKey.currentState.showSnackBar(objSnackbar);
+
   }
 
 
