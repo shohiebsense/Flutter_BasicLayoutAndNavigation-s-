@@ -4,10 +4,10 @@ import 'package:flutter_layouts/grid_layout_2/grid_page.dart';
 import 'package:flutter_layouts/login_layout/login_widget.dart';
 import 'package:flutter_layouts/login_layout_2/login_widget_2.dart';
 import 'package:flutter_layouts/main_layout_item.dart';
-import 'package:flutter_layouts/first_next_layout/page_two.dart';
 import 'package:flutter_layouts/returning_data/returning_data_screen.dart';
 import 'package:flutter_layouts/second_next_layout/first_route.dart';
 import 'package:flutter_layouts/sized_box_layout/sized_box_sample.dart';
+import 'package:flutter_layouts/udemy_course_layout/udemy_course_page.dart';
 
 import 'grid_layout/grid_widget.dart';
 import 'login_layout_3/LoginLayoutState.dart';
@@ -64,7 +64,7 @@ Widget _populateLayoutStrings(){
       case 0:
         Navigator.of(context)
             .push(MaterialPageRoute<void>(builder: (BuildContext context) {
-          return PageTwo();
+          return UdemyCoursePageWidget();
         }));
         break;
       case 1:
