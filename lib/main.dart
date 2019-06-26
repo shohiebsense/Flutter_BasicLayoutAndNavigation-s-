@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? kIOSTheme
           : kDefaultTheme,
-      home: BaselineLayoutWidget(),
+      home: LayoutItem(),
       routes: routes,
     );
   }

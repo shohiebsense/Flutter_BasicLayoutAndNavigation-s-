@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layouts/chat_layout/chat_state_widget.dart';
 import 'package:flutter_layouts/grid_layout_2/grid_page.dart';
+import 'package:flutter_layouts/list_layout/list_widget.dart';
 import 'package:flutter_layouts/login_layout/login_widget.dart';
 import 'package:flutter_layouts/login_layout_2/login_widget_2.dart';
 import 'package:flutter_layouts/main_layout_item.dart';
@@ -28,6 +29,7 @@ class LayoutItemsState extends State<LayoutItem> {
     _layoutNames.add("Login Layout 3");
     _layoutNames.add("Grid Layout");
     _layoutNames.add("Grid Layout 2");
+    _layoutNames.add("List Layout");
 
   }
 
@@ -124,6 +126,12 @@ Widget _populateLayoutStrings(){
         Navigator.of(context)
             .push(MaterialPageRoute(builder:(BuildContext context){
           return GridPage();
+        }));
+        break;
+      case 10:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder:(BuildContext context){
+          return ListWidget();
         }));
         break;
     }
